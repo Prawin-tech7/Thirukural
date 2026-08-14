@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ta">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Thirukural {{ kural.number }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body data-page="kural" data-kural-number="{{ kural.number }}">
+    <header class="app-header">
+      <a class="nav-button glass" href="{{ url_for('index') }}" aria-label="Back" data-i18n="backButton">Back</a>
+      <button id="langBtn" class="language-button glass" type="button" aria-label="Language">
+        <span class="language-title">Language / மொழி</span>
+        <span class="language-choice">
+          <span class="lang-left">English</span>
+          <span class="language-check left">✓</span>
+          <span class="sep"> / </span>
+          <span class="lang-right">தமிழ்</span>
+          <span class="language-check right">✓</span>
+        </span>
+      </button>
+      <button id="settingsBtn" class="settings-trigger glass" type="button" aria-label="Settings"><span>⚙</span><span data-i18n="settingsButton">Settings</span></button>
+    </header>
+
+    <main class="screen">
+      <article class="kural-card glass">
+        <div class="kural-topline">
+          <div class="kural-actions-inline">
+            <button id="kuralPrevBtn" class="pager-button small glass" aria-label="Previous">‹</button>
+            <p class="eyebrow kural-pill"><span data-i18n="kuralNumber">குறள்</span> {{ kural.number }}</p>
+            <button id="kuralNextBtn" class="pager-button small glass" aria-label="Next">›</button>
+          </div>
+          <button id="kuralTranslateBtn" class="mini-toggle glass" type="button" data-i18n="showEnglish">Show English</button>
+        </div>
+
+        <div class="kural-lines" lang="ta">
+          <p>{{ kural.line1 }}</p>
+          <p>{{ kural.line2 }}</p>
+        </div>
+
+        <div id="kuralEnglishPanel" class="kural-translation glass" hidden>
+          <p>{{ kural.translation }}</p>
+        </div>
+
+        <button id="meaningToggle" class="meaning-option glass" type="button">
+          <span data-i18n="meaningBoxTitle">குறளின் பொருள்</span>
+          <strong id="meaningLangLabel" data-i18n="englishShort">English</strong>
+        </button>
+
+        <section id="meaningPanel" class="meaning-panel glass" lang="ta">
+          <h2 id="meaningTitle" data-i18n="tamilMeaningTitle">தமிழ் விளக்கம்</h2>
+          <p id="meaningText" data-ta="{{ kural.mv or kural.sp or kural.mk }}" data-en="{{ kural.explanation or kural.translation }}">{{ kural.mv or kural.sp or kural.mk }}</p>
+        </section>
+      </article>
+    </main>
+
+    <aside id="settingsPanel" class="settings-panel glass" aria-hidden="true">
+      <div class="section-title">
+        <h2 data-i18n="settingsTitle">Settings</h2>
+        <button id="closeSettingsBtn" class="icon-button glass" type="button" aria-label="Close">×</button>
+      </div>
+
+      <div class="settings-group">
+        <button class="settings-toggle" type="button" data-target="colorOptions"><span data-i18n="colorsLabel">Color</span><span class="chevron">⌄</span></button>
+        <div id="colorOptions" class="settings-options">
+          <div id="themeList" class="theme-list"></div>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <button class="settings-toggle" type="button" data-target="pageSizeOptions"><span data-i18n="pageSizeLabel">Page size</span><span class="chevron">⌄</span></button>
+        <div id="pageSizeOptions" class="settings-options">
+          <label class="range-row"><span data-i18n="pageSizeLabel">Page size</span>
+            <output id="pageSizeValue">50</output>
+            <span class="size-controls">
+              <button id="pageSizeDecr" class="size-button">−</button>
+              <button id="pageSizeIncr" class="size-button">+</button>
+            </span>
+          </label>
+          <input id="pageSizeRange" type="range" min="10" max="100" value="50">
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <button class="settings-toggle" type="button" data-target="textSizeOptions"><span data-i18n="textSizeLabel">Text size</span><span class="chevron">⌄</span></button>
+        <div id="textSizeOptions" class="settings-options">
+          <label class="range-row"><span data-i18n="textSizeLabel">Text size</span>
+            <output id="textSizeValue">50</output>
+            <span class="size-controls">
+              <button id="textSizeDecr" class="size-button">−</button>
+              <button id="textSizeIncr" class="size-button">+</button>
+            </span>
+          </label>
+          <input id="textSizeRange" type="range" min="10" max="100" value="50">
+        </div>
+      </div>
+    </aside>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

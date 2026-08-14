@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ta">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Thirukural Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body data-page="home">
+    <header class="app-header">
+      <button id="backBtn" class="nav-button glass" type="button" aria-label="Exit" data-i18n="exitButton">Exit</button>
+      <button id="langBtn" class="language-button glass" type="button" aria-label="Language">
+        <span class="language-title">Language / மொழி</span>
+        <span class="language-choice">
+          <span class="lang-left">English</span>
+          <span class="language-check left">✓</span>
+          <span class="sep"> / </span>
+          <span class="lang-right">தமிழ்</span>
+          <span class="language-check right">✓</span>
+        </span>
+      </button>
+      <button id="settingsBtn" class="settings-trigger glass" type="button" aria-label="Settings"><span>⚙</span><span data-i18n="settingsButton">Settings</span></button>
+    </header>
+
+    <main class="screen">
+      <section class="hero-panel glass">
+        <p class="eyebrow" data-i18n="eyebrow">திருக்குறள் தேடல்</p>
+        <h1 data-i18n="homeTitle">குறள் எண்ணை உள்ளிடுங்கள்</h1>
+        <p class="subcopy" data-i18n="homeSubcopy">1 முதல் 1330 வரை எந்த எண்ணையும் கொடுத்தால் அந்த திருக்குறள் உடனே வரும்.</p>
+
+        <form id="lookupForm" class="lookup-form" action="{{ url_for('kural_page') }}" method="get">
+          <label for="numInput" data-i18n="inputLabel">குறள் எண்</label>
+          <div class="search-row">
+            <input id="numInput" name="n" type="number" inputmode="numeric" min="{{ kural_min }}" max="{{ kural_max }}" placeholder="1 - 1330" required autofocus>
+            <button class="primary-button glass" type="submit" data-i18n="search">தேடு</button>
+          </div>
+          <p id="formMessage" class="message">{% if error %}{{ error }}{% endif %}</p>
+        </form>
+      </section>
+
+      <section class="history-panel glass">
+        <div class="section-title">
+          <div>
+            <h2 data-i18n="historyTitle">தேடல் வரலாறு</h2>
+            <p id="historyCount" class="history-count">0</p>
+          </div>
+          <button id="toggleHistoryBtn" class="text-button" type="button" data-i18n="viewAll">View all</button>
+        </div>
+        <div id="historyList" class="history-list compact-history"></div>
+        <button id="clearHistoryBtn" class="clear-all-button glass" type="button" data-i18n="clearAll">Clear all</button>
+      </section>
+    </main>
+
+    <aside id="settingsPanel" class="settings-panel glass" aria-hidden="true">
+      <div class="section-title">
+        <h2 data-i18n="settingsTitle">Settings</h2>
+        <button id="closeSettingsBtn" class="icon-button glass" type="button" aria-label="Close">×</button>
+      </div>
+
+      <div class="settings-group">
+        <button class="settings-toggle" type="button" data-target="colorOptions"><span data-i18n="colorsLabel">Color</span><span class="chevron">⌄</span></button>
+        <div id="colorOptions" class="settings-options">
+          <div id="themeList" class="theme-list"></div>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <button class="settings-toggle" type="button" data-target="pageSizeOptions"><span data-i18n="pageSizeLabel">Page size</span><span class="chevron">⌄</span></button>
+        <div id="pageSizeOptions" class="settings-options">
+          <label class="range-row"><span data-i18n="pageSizeLabel">Page size</span>
+            <output id="pageSizeValue">50</output>
+            <span class="size-controls">
+              <button id="pageSizeDecr" class="size-button">−</button>
+              <button id="pageSizeIncr" class="size-button">+</button>
+            </span>
+          </label>
+          <input id="pageSizeRange" type="range" min="10" max="100" value="50">
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <button class="settings-toggle" type="button" data-target="textSizeOptions"><span data-i18n="textSizeLabel">Text size</span><span class="chevron">⌄</span></button>
+        <div id="textSizeOptions" class="settings-options">
+          <label class="range-row"><span data-i18n="textSizeLabel">Text size</span>
+            <output id="textSizeValue">50</output>
+            <span class="size-controls">
+              <button id="textSizeDecr" class="size-button">−</button>
+              <button id="textSizeIncr" class="size-button">+</button>
+            </span>
+          </label>
+          <input id="textSizeRange" type="range" min="10" max="100" value="50">
+        </div>
+      </div>
+    </aside>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
