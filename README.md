@@ -35,7 +35,7 @@ These are a few of the more memorable Kurals and make a nice starting point for 
 
 ```text
 Thirukural/
-├── main.py                     # Flask app entry point
+├── server.py                    # Flask app entry point
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # project documentation
 ├── .gitignore                  # ignores cache and editor files
@@ -67,7 +67,7 @@ This screen shows the selected Kural in Tamil, with an option to toggle English 
 
 ```bash
 pip install -r requirements.txt
-python main.py
+python server.py
 ```
 
 Open:
@@ -77,3 +77,11 @@ http://127.0.0.1:5000
 ```
 
 The app reads the local `thirukural_tamil.csv` file directly, so no extra dataset build step is required.
+
+## Technical Notes
+
+- **Entry point**: `server.py` (previously renamed from `main.py` for clarity)
+- **Debug mode**: Disabled for production safety
+- **Dependencies**: Only Flask is required (removed unused `requests`)
+- **Data source**: Uses CSV format for fast local loading without external dependencies
+- **Color themes**: 15+ glass-style themes including Fire & Ice, Sunset Garden, and Forest Glow
