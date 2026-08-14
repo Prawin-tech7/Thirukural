@@ -1,51 +1,175 @@
 const THEMES = [
-  ["peacock", "Peacock", ["#e8fbff", "#5eead4", "#38bdf8", "#164e63"], "#0d9488", "#06252b"],
 
-  ["diamond", "Diamond", ["#ffffff", "#dbeafe", "#93c5fd", "#64748b"], "#3b82f6", "#111827"],
+  // ═══════════════════════════════════════════════════════════════
+  // 1–8 : SIGNATURE THEMES
+  // ═══════════════════════════════════════════════════════════════
 
-  ["gold", "Gold", ["#fffbea", "#fde68a", "#f59e0b", "#78350f"], "#d97706", "#28180b"],
+  ["diamond", "Diamond",
+    ["#ffffff", "#e0f2fe", "#bae6fd", "#93c5fd", "#c4b5fd", "#64748b"],
+    "#3b82f6", "#111827"
+  ],
 
-  ["silver", "Silver", ["#ffffff", "#e5e7eb", "#9ca3af", "#374151"], "#6b7280", "#111827"],
+  ["gold", "Gold",
+    ["#fffbea", "#fef3c7", "#fde68a", "#fbbf24", "#f59e0b", "#78350f"],
+    "#d97706", "#28180b"
+  ],
 
-  ["ruby", "Ruby", ["#fff1f2", "#fda4af", "#e11d48", "#4c0519"], "#be123c", "#260b14"],
+  ["silver", "Silver",
+    ["#ffffff", "#f8fafc", "#e2e8f0", "#cbd5e1", "#93c5fd", "#475569"],
+    "#64748b", "#111827"
+  ],
 
-  ["sapphire", "Sapphire", ["#eff6ff", "#93c5fd", "#3b82f6", "#172554"], "#1d4ed8", "#07142e"],
+  ["lavender", "Lavender",
+    ["#faf5ff", "#f3e8ff", "#ddd6fe", "#f0abfc", "#a78bfa", "#5b21b6"],
+    "#9333ea", "#211333"
+  ],
 
-  ["lavender", "Lavender", ["#f5f3ff", "#ddd6fe", "#a78bfa", "#5b21b6"], "#7c3aed", "#211333"],
+  ["mocha", "Mocha",
+    ["#fff8f0", "#f5e6d3", "#e7c9a9", "#c08457", "#d97706", "#3b1f12"],
+    "#925c3a", "#21120b"
+  ],
 
-  ["sunset-garden", "Sunset Garden", ["#fff7ed", "#f9a8d4", "#fb923c", "#6b21a8"], "#f97316", "#2a102d"],
+  ["dark-violet", "Dark Violet",
+    ["#2e1065", "#581c87", "#7e22ce", "#a855f7", "#6366f1", "#090313"],
+    "#c084fc", "#faf5ff"
+  ],
 
-  ["forest-glow", "Forest Glow", ["#ecfdf5", "#86efac", "#22c55e", "#14532d"], "#16a34a", "#041f12"],
+  ["dark-blue", "Dark Blue",
+    ["#071426", "#172554", "#1e3a8a", "#2563eb", "#38bdf8", "#020617"],
+    "#60a5fa", "#eff6ff"
+  ],
 
-  ["aurora-rose", "Aurora Rose", ["#fdf2f8", "#f9a8d4", "#a78bfa", "#312e81"], "#8b5cf6", "#1f1633"],
+  ["black", "Black",
+    ["#020202", "#09090b", "#18181b", "#312e81", "#4c1d95", "#090313", "#000000"],
+    "#a78bfa", "#ffffff"
+  ],
 
-  ["dark-violet", "Dark Violet", ["#2e1065", "#581c87", "#c084fc", "#0f0718"], "#a855f7", "#faf5ff"],
 
-  ["dark-blue", "Dark Blue", ["#0f172a", "#1e3a8a", "#60a5fa", "#020617"], "#60a5fa", "#eff6ff"],
+  // ═══════════════════════════════════════════════════════════════
+  // 9–16 : COLORFUL THEMES
+  // ═══════════════════════════════════════════════════════════════
 
-  ["black", "Black", ["#18181b", "#27272a", "#52525b", "#050505"], "#a1a1aa", "#ffffff"],
+  ["sunset-garden", "Sunset Garden",
+    ["#fff7ed", "#fed7aa", "#f9a8d4", "#fb923c", "#e879f9", "#a855f7", "#312e81"],
+    "#f97316", "#2a102d"
+  ],
 
-  ["mocha", "Mocha", ["#fff8f0", "#d6b08c", "#8b5e3c", "#3b1f12"], "#795548", "#21120b"],
+  ["ruby-ocean", "Ruby Ocean",
+    ["#fff1f2", "#fecdd3", "#fb7185", "#e11d48", "#38bdf8", "#2563eb", "#1e3a8a"],
+    "#e11d48", "#071629"
+  ],
 
-  ["aurora", "Aurora", ["#ecfeff", "#86efac", "#818cf8", "#312e81"], "#6366f1", "#0b1028"],
+  ["coral-ocean", "Coral Ocean",
+    ["#ecfeff", "#cffafe", "#67e8f9", "#06b6d4", "#fb7185", "#818cf8", "#172554"],
+    "#0891b2", "#111827"
+  ],
 
-  ["berry-gold", "Berry Gold", ["#fff7ed", "#f9a8d4", "#a855f7", "#78350f"], "#be185d", "#24101d"],
+  ["violet-flame", "Violet Flame",
+    ["#fff1f2", "#fda4af", "#fb7185", "#f97316", "#e879f9", "#a855f7", "#581c87"],
+    "#db2777", "#21102f"
+  ],
 
-  ["teal-flame", "Teal Flame", ["#ecfeff", "#2dd4bf", "#f97316", "#172554"], "#0d9488", "#07142e"],
+  ["fire-ice", "Fire & Ice",
+    ["#fff7ed", "#fed7aa", "#f97316", "#fb7185", "#93c5fd", "#60a5fa", "#1e3a8a"],
+    "#ea580c", "#071629"
+  ],
 
-  ["coral-ocean", "Coral Ocean", ["#ecfeff", "#67e8f9", "#fb7185", "#1e3a8a"], "#0891b2", "#111827"],
+  ["royal-sunset", "Royal Sunset",
+    ["#fff7cc", "#fde68a", "#fbbf24", "#f97316", "#e879f9", "#a855f7", "#312e81"],
+    "#7c3aed", "#17102b"
+  ],
 
-  ["violet-flame", "Violet Flame", ["#fff1f2", "#fb7185", "#f97316", "#581c87"], "#db2777", "#21102f"],
+  ["mint-coral", "Mint & Coral",
+    ["#ecfdf5", "#bbf7d0", "#5eead4", "#22c55e", "#fb7185", "#e11d48", "#881337"],
+    "#e11d48", "#1b1518"
+  ],
 
-  ["fire-ice", "Fire & Ice", ["#fff1f2", "#60a5fa", "#f97316", "#1e3a8a"], "#ea580c", "#071629"],
+  ["ocean-sunset", "Ocean Sunset",
+    ["#ecfeff", "#cffafe", "#67e8f9", "#38bdf8", "#818cf8", "#fb923c", "#c2410c"],
+    "#6366f1", "#10152b"
+  ],
 
-  ["royal-sunset", "Royal Sunset", ["#fff7ed", "#fbbf24", "#a855f7", "#312e81"], "#7c3aed", "#17102b"],
 
-  ["mint-coral", "Mint & Coral", ["#ecfdf5", "#5eead4", "#fb7185", "#881337"], "#e11d48", "#1b1518"],
+  // ═══════════════════════════════════════════════════════════════
+  // 17–22 : DEEP MIXED THEMES
+  // ═══════════════════════════════════════════════════════════════
 
-  ["ocean-sunset", "Ocean Sunset", ["#ecfeff", "#67e8f9", "#818cf8", "#f97316"], "#6366f1", "#10152b"]
+  ["berry-gold", "Berry Gold",
+    ["#fff7ed", "#fce7f3", "#f9a8d4", "#ec4899", "#fbbf24", "#a855f7", "#6b21a8"],
+    "#be185d", "#24101d"
+  ],
+
+  ["tropical-night", "Tropical Night",
+    ["#ccfbf1", "#5eead4", "#22c55e", "#06b6d4", "#38bdf8", "#6366f1", "#1e1b4b"],
+    "#0891b2", "#071426"
+  ],
+
+  ["peacock-flame", "Peacock Flame",
+    ["#ecfeff", "#99f6e4", "#14b8a6", "#06b6d4", "#f97316", "#a855f7", "#581c87"],
+    "#0d9488", "#17102b"
+  ],
+
+  ["candy-sky", "Candy Sky",
+    ["#fff1f2", "#fbcfe8", "#f9a8d4", "#e879f9", "#c084fc", "#60a5fa", "#22d3ee"],
+    "#c026d3", "#111827"
+  ],
+
+  ["emerald-royal", "Emerald Royal",
+    ["#ecfdf5", "#a7f3d0", "#34d399", "#22c55e", "#fbbf24", "#818cf8", "#312e81"],
+    "#6366f1", "#101827"
+  ],
+
+  ["copper-sea", "Copper Sea",
+    ["#fff7ed", "#fed7aa", "#fb923c", "#c2410c", "#2dd4bf", "#14b8a6", "#164e63"],
+    "#0891b2", "#20120c"
+  ],
+
+
+  // ═══════════════════════════════════════════════════════════════
+  // 23–30 : ULTRA MIXED / PREMIUM THEMES
+  // ═══════════════════════════════════════════════════════════════
+
+  ["cherry-lime", "Cherry Lime",
+    ["#fff1f2", "#fecdd3", "#fb7185", "#e11d48", "#bef264", "#84cc16", "#22c55e", "#365314"],
+    "#84cc16", "#17210b"
+  ],
+
+  ["blueberry-peach", "Blueberry Peach",
+    ["#eff6ff", "#dbeafe", "#60a5fa", "#818cf8", "#c4b5fd", "#fdba74", "#fb923c", "#c2410c"],
+    "#f97316", "#111827"
+  ],
+
+  ["mystic-gold", "Mystic Gold",
+    ["#faf5ff", "#e9d5ff", "#a855f7", "#7e22ce", "#fbbf24", "#2dd4bf", "#2563eb", "#0f172a"],
+    "#eab308", "#101827"
+  ],
+
+  ["rose-forest", "Rose Forest",
+    ["#fff1f2", "#fbcfe8", "#fb7185", "#c084fc", "#86efac", "#4ade80", "#15803d", "#14532d"],
+    "#e11d48", "#102016"
+  ],
+
+  ["cosmic-sunset", "Cosmic Sunset",
+    ["#fdf2f8", "#f5d0fe", "#e879f9", "#c084fc", "#818cf8", "#fb923c", "#f97316", "#172554"],
+    "#c026d3", "#0d1024"
+  ],
+
+  ["citrus-night", "Citrus Night",
+    ["#fefce8", "#fef08a", "#facc15", "#fb923c", "#22d3ee", "#06b6d4", "#6366f1", "#172554"],
+    "#0891b2", "#0b1325"
+  ],
+
+  ["imperial", "Imperial",
+    ["#fff7cc", "#fde68a", "#fbbf24", "#f97316", "#e879f9", "#a855f7", "#22d3ee", "#0e7490"],
+    "#7e22ce", "#111827"
+  ],
+
+  ["neon-orchid", "Neon Orchid",
+    ["#fdf4ff", "#f5d0fe", "#e879f9", "#c026d3", "#a855f7", "#22d3ee", "#38bdf8", "#2563eb"],
+    "#c026d3", "#0f1029"
+  ]
+
 ];
-
 const COPY = {
   ta: {
     eyebrow: "திருக்குறள் தேடல்",
@@ -133,26 +257,45 @@ function copy(key) {
 }
 
 function applyTheme(themeId) {
-  const selected = THEMES.find(([id]) => id === themeId) || THEMES[0];
+  const resolvedId = themeId || localStorage.getItem(storage.theme) || "sunset-garden";
+  const selected = THEMES.find(([id]) => id === resolvedId) || THEMES[0];
   const [, , colors, accent, text] = selected;
   const root = document.documentElement;
-  const kuralBadgeText = themeId === "black" ? "#ffffff" : "#111827";
+  const bgA = colors[0] || "#fff7ed";
+  const bgB = colors[1] || bgA;
+  const bgC = colors[2] || bgB;
+  const bgD = colors[3] || bgC;
+  const badgeText = isDarkColor(bgD) ? "#ffffff" : "#111827";
+  const accentText = isDarkColor(accent) ? "#f8fafc" : "#111827";
 
-  root.style.setProperty("--bg-a", colors[0]);
-  root.style.setProperty("--bg-b", colors[1]);
-  root.style.setProperty("--bg-c", colors[2]);
-  root.style.setProperty("--bg-d", colors[3]);
+  root.style.setProperty("--bg-a", bgA);
+  root.style.setProperty("--bg-b", bgB);
+  root.style.setProperty("--bg-c", bgC);
+  root.style.setProperty("--bg-d", bgD);
   root.style.setProperty("--accent", accent);
   root.style.setProperty("--text", text);
   root.style.setProperty("--muted", colorMixText(text));
-  root.style.setProperty("--accent-text", themeId === "night" ? "#03131d" : "#fffaf7");
-  root.style.setProperty("--kural-pill-text", kuralBadgeText);
-  root.style.setProperty("--shadow", themeId === "night" ? "rgba(0, 0, 0, 0.32)" : "rgba(18, 41, 20, 0.16)");
+  root.style.setProperty("--accent-text", accentText);
+  root.style.setProperty("--kural-pill-text", badgeText);
+  root.style.setProperty("--shadow", isDarkColor(bgD) ? "rgba(0, 0, 0, 0.32)" : "rgba(18, 41, 20, 0.16)");
   localStorage.setItem(storage.theme, selected[0]);
 
   document.querySelectorAll(".theme-option").forEach((button) => {
-    button.classList.toggle("active", button.dataset.theme === selected[0]);
+    const isActive = button.dataset.theme === selected[0];
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
   });
+}
+
+function isDarkColor(hex) {
+  const clean = (hex || "#ffffff").replace("#", "");
+  const value = clean.length === 3 ? clean.split("").map((char) => char + char).join("") : clean;
+  const numeric = Number.parseInt(value, 16);
+  const r = (numeric >> 16) & 255;
+  const g = (numeric >> 8) & 255;
+  const b = numeric & 255;
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return luminance < 0.45;
 }
 
 function colorMixText(text) {

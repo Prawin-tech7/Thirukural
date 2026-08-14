@@ -564,9 +564,21 @@ input[type="number"]:focus {
   padding: 8px;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.25);
+  border: 1px solid transparent;
   text-align: left;
   font-size: calc(0.82rem * var(--text-scale));
   font-weight: 850;
+  transition: border-color 120ms ease, transform 120ms ease, background 120ms ease;
+}
+
+.theme-option:hover {
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.theme-option.active {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.38);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24);
 }
 
 .theme-swatch {
