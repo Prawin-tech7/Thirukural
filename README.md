@@ -82,17 +82,11 @@ Thirukural/
 └── README-assets/              # optional local screenshots if added later
 ```
 
-## User Interface (Fire & Ice Theme)
+## User Interface
 
-### Home Screen
-![Home Screen UI](home-ui.svg)
+**Home screen**: The app displays a clean search interface where users enter a Kural number (1-1330) to retrieve the verse instantly. The layout is simple, mobile-friendly, and includes a search history panel for quick revisits.
 
-**Description**: The search interface displays a clean, welcoming screen where you enter a Kural number (1-1330). The Fire & Ice theme uses warm reds and oranges blending into cool purples, creating a vibrant visual experience. Below the search box, your search history is automatically saved for quick access.
-
-### Kural Detail Page
-![Kural Detail UI](detail-ui.svg)
-
-**Description**: When you select a Kural, this page shows the verse in Tamil text. You can toggle to see the English translation using the "Show English" button. The meaning section explains the Kural in your chosen language. Navigation arrows let you browse to the previous or next Kural easily.
+**Kural detail page**: Shows the selected Kural in Tamil text, with a toggle button to display the English translation. Users can view the meaning of the Kural in either Tamil or English. Navigation buttons allow browsing to the previous or next Kural.
 
 ## Run
 
