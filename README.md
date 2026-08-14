@@ -35,7 +35,7 @@ These are a few of the more memorable Kurals and make a nice starting point for 
 
 ```text
 Thirukural/
-├── server.py                    # Flask app entry point
+├── flask_app.py                 # Flask app entry point
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # project documentation
 ├── .gitignore                  # ignores cache and editor files
@@ -49,25 +49,17 @@ Thirukural/
 └── README-assets/              # optional local screenshots if added later
 ```
 
-## UI Screenshots
+## User Interface
 
-### Home screen
+**Home screen**: The app displays a clean search interface where users enter a Kural number (1-1330) to retrieve the verse instantly. The layout is simple, mobile-friendly, and includes a search history panel for quick revisits.
 
-![Home screen](https://raw.githubusercontent.com/Prawin-tech7/Thirukural/master/README-assets/home-screen-fire-ice.svg)
-
-This screen allows the user to enter a Kural number and instantly search for the matching verse. The Fire & Ice theme gives the app a vibrant, modern look while keeping the interface clean and readable.
-
-### Kural detail page
-
-![Kural detail page](https://raw.githubusercontent.com/Prawin-tech7/Thirukural/master/README-assets/kural-detail-fire-ice.svg)
-
-This screen shows the selected Kural in Tamil, with an option to toggle English translation and view the meaning. The Fire & Ice palette keeps the reading area visually rich without reducing clarity.
+**Kural detail page**: Shows the selected Kural in Tamil text, with a toggle button to display the English translation. Users can view the meaning of the Kural in either Tamil or English. Navigation buttons allow browsing to the previous or next Kural.
 
 ## Run
 
 ```bash
 pip install -r requirements.txt
-python server.py
+python flask_app.py
 ```
 
 Open:
@@ -80,7 +72,7 @@ The app reads the local `thirukural_tamil.csv` file directly, so no extra datase
 
 ## Technical Notes
 
-- **Entry point**: `server.py` (previously renamed from `main.py` for clarity)
+- **Entry point**: `flask_app.py` (a clean, descriptive name for the Flask application)
 - **Debug mode**: Disabled for production safety
 - **Dependencies**: Only Flask is required (removed unused `requests`)
 - **Data source**: Uses CSV format for fast local loading without external dependencies
