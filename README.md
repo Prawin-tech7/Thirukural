@@ -2,6 +2,39 @@
 
 A mobile-friendly Flask app for searching any Thirukural by number from 1 to 1330.
 
+## 🚀 Quick Start - How to Run
+
+Follow these steps to run the app on your computer:
+
+### Step 1: Install Python dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Step 2: Start the Flask app
+```bash
+python flask_app.py
+```
+
+You should see output like:
+```
+WARNING in flask.app: This is a development server. Do not use it in production.
+Running on http://127.0.0.1:5000
+```
+
+### Step 3: Open the app in your browser
+Click this link or paste it in your browser:
+```
+http://127.0.0.1:5000
+```
+
+That's it! The app will load and you can start searching for Kurals.
+
+### Step 4: Stop the app (when done)
+Press `Ctrl+C` in the terminal to stop the app.
+
+---
+
 ## Project Overview
 
 This project helps users quickly look up and read Thirukkural verses in Tamil, toggle between Tamil and English views, and explore the meaning of each Kural in a clean, modern interface. It is designed for simple browsing on both desktop and mobile screens.
@@ -49,26 +82,28 @@ Thirukural/
 └── README-assets/              # optional local screenshots if added later
 ```
 
-## User Interface
+## User Interface (Fire & Ice Theme)
 
-**Home screen**: The app displays a clean search interface where users enter a Kural number (1-1330) to retrieve the verse instantly. The layout is simple, mobile-friendly, and includes a search history panel for quick revisits.
+### Home Screen
+![Home Screen UI](home-ui.svg)
 
-**Kural detail page**: Shows the selected Kural in Tamil text, with a toggle button to display the English translation. Users can view the meaning of the Kural in either Tamil or English. Navigation buttons allow browsing to the previous or next Kural.
+**Description**: The search interface displays a clean, welcoming screen where you enter a Kural number (1-1330). The Fire & Ice theme uses warm reds and oranges blending into cool purples, creating a vibrant visual experience. Below the search box, your search history is automatically saved for quick access.
+
+### Kural Detail Page
+![Kural Detail UI](detail-ui.svg)
+
+**Description**: When you select a Kural, this page shows the verse in Tamil text. You can toggle to see the English translation using the "Show English" button. The meaning section explains the Kural in your chosen language. Navigation arrows let you browse to the previous or next Kural easily.
 
 ## Run
 
+See **Quick Start** section above for detailed step-by-step instructions.
+
+Quick command:
 ```bash
-pip install -r requirements.txt
-python flask_app.py
+pip install -r requirements.txt && python flask_app.py
 ```
 
-Open:
-
-```text
-http://127.0.0.1:5000
-```
-
-The app reads the local `thirukural_tamil.csv` file directly, so no extra dataset build step is required.
+Then open http://127.0.0.1:5000 in your browser.
 
 ## Technical Notes
 

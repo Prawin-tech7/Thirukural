@@ -1,0 +1,45 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fire-ice-bg" x1="0" y1="0" x2="1200" y2="800">
+      <stop offset="0%" stop-color="#FFF1F2"/>
+      <stop offset="35%" stop-color="#FB7185"/>
+      <stop offset="65%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#581C87"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#fire-ice-bg)"/>
+  
+  <!-- Header -->
+  <rect x="60" y="30" width="1080" height="90" rx="20" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+  <rect x="90" y="50" width="120" height="50" rx="14" fill="rgba(255,255,255,0.25)"/>
+  <text x="150" y="82" text-anchor="middle" fill="#FFFFFF" font-size="18" font-family="Arial, sans-serif" font-weight="bold">Exit</text>
+  
+  <rect x="350" y="50" width="340" height="50" rx="14" fill="rgba(255,255,255,0.18)"/>
+  <text x="520" y="82" text-anchor="middle" fill="#FFFFFF" font-size="16" font-family="Arial, sans-serif" font-weight="bold">Language / மொழி</text>
+  
+  <rect x="950" y="50" width="110" height="50" rx="14" fill="rgba(255,255,255,0.25)"/>
+  <text x="1005" y="82" text-anchor="middle" fill="#FFFFFF" font-size="16" font-family="Arial, sans-serif" font-weight="bold">⚙ Settings</text>
+  
+  <!-- Main Content Panel -->
+  <rect x="80" y="160" width="1040" height="600" rx="28" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  
+  <!-- Title and Description -->
+  <text x="140" y="240" fill="#FFFFFF" font-size="18" font-family="Arial, sans-serif" font-weight="bold" opacity="0.9">திருக்குறள் தேடல்</text>
+  <text x="140" y="320" fill="#FFFFFF" font-size="42" font-family="Arial, sans-serif" font-weight="900">குறள் எண்ணை உள்ளிடுங்கள்</text>
+  <text x="140" y="395" fill="rgba(255,255,255,0.85)" font-size="18" font-family="Arial, sans-serif">Type any number from 1 to 1330 and find the Thirukural instantly.</text>
+  
+  <!-- Input Section -->
+  <text x="140" y="470" fill="rgba(255,255,255,0.9)" font-size="16" font-family="Arial, sans-serif" font-weight="bold">குறள் எண்</text>
+  <rect x="140" y="490" width="700" height="60" rx="18" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+  <text x="170" y="527" fill="rgba(255,255,255,0.6)" font-size="20" font-family="Arial, sans-serif">1 - 1330</text>
+  
+  <rect x="880" y="490" width="140" height="60" rx="18" fill="#F97316"/>
+  <text x="950" y="527" text-anchor="middle" fill="#FFFFFF" font-size="18" font-family="Arial, sans-serif" font-weight="bold">தேடு</text>
+  
+  <!-- History Section -->
+  <rect x="140" y="590" width="880" height="130" rx="20" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <text x="170" y="630" fill="#FFFFFF" font-size="18" font-family="Arial, sans-serif" font-weight="bold">Search history</text>
+  <text x="900" y="630" text-anchor="end" fill="#FB7185" font-size="16" font-family="Arial, sans-serif" font-weight="bold">View all</text>
+  <circle cx="170" cy="680" r="28" fill="rgba(255,255,255,0.2)"/>
+  <text x="170" y="690" text-anchor="middle" fill="#FFFFFF" font-size="16" font-family="Arial, sans-serif" font-weight="bold">1</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fire-ice-detail" x1="0" y1="0" x2="1200" y2="900">
+      <stop offset="0%" stop-color="#FFF1F2"/>
+      <stop offset="30%" stop-color="#FB7185"/>
+      <stop offset="60%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#581C87"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#fire-ice-detail)"/>
+  
+  <!-- Header -->
+  <rect x="60" y="30" width="1080" height="80" rx="18" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+  <rect x="90" y="50" width="100" height="42" rx="12" fill="rgba(255,255,255,0.25)"/>
+  <text x="140" y="77" text-anchor="middle" fill="#FFFFFF" font-size="16" font-family="Arial, sans-serif" font-weight="bold">Back</text>
+  
+  <rect x="350" y="50" width="320" height="42" rx="12" fill="rgba(255,255,255,0.18)"/>
+  <text x="510" y="77" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Arial, sans-serif" font-weight="bold">Language / மொழி</text>
+  
+  <rect x="950" y="50" width="110" height="42" rx="12" fill="rgba(255,255,255,0.25)"/>
+  <text x="1005" y="77" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Arial, sans-serif" font-weight="bold">⚙ Settings</text>
+  
+  <!-- Main Content -->
+  <rect x="80" y="140" width="1040" height="720" rx="26" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  
+  <!-- Kural Header -->
+  <rect x="130" y="180" width="940" height="70" rx="16" fill="rgba(255,255,255,0.18)"/>
+  <rect x="150" y="195" width="90" height="40" rx="20" fill="rgba(255,255,255,0.28)"/>
+  <text x="195" y="220" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Arial, sans-serif" font-weight="bold">குறள் 1</text>
+  <text x="900" y="220" text-anchor="middle" fill="#FB7185" font-size="14" font-family="Arial, sans-serif" font-weight="bold">Show English</text>
+  
+  <!-- Kural Text -->
+  <text x="150" y="310" fill="#FFFFFF" font-size="32" font-family="Segoe UI, Arial, sans-serif" font-weight="900">அறத்தாறு இதியம் என்ற</text>
+  <text x="150" y="360" fill="#FFFFFF" font-size="32" font-family="Segoe UI, Arial, sans-serif" font-weight="900">மூவakzம் மற்றுமோர்மூன्यம்</text>
+  
+  <!-- Meaning Toggle -->
+  <rect x="130" y="410" width="940" height="65" rx="16" fill="rgba(255,255,255,0.18)"/>
+  <text x="160" y="450" fill="#FFFFFF" font-size="16" font-family="Arial, sans-serif" font-weight="bold">Meaning of this Kural</text>
+  <text x="1040" y="450" text-anchor="end" fill="#F97316" font-size="15" font-family="Arial, sans-serif" font-weight="bold">English</text>
+  
+  <!-- Meaning Panel -->
+  <rect x="130" y="500" width="940" height="330" rx="18" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <text x="160" y="540" fill="#FFFFFF" font-size="16" font-family="Arial, sans-serif" font-weight="bold">English meaning</text>
+  <text x="160" y="590" fill="rgba(255,255,255,0.9)" font-size="18" font-family="Arial, sans-serif" font-weight="500">
+    This Kural explains the value of virtue and righteousness as the foundation of human life. It teaches that goodness is eternal and leads to prosperity.
+  </text>
+  <text x="160" y="660" fill="rgba(255,255,255,0.85)" font-size="16" font-family="Arial, sans-serif" font-weight="500">
+    The meaning emphasizes that virtuous living is the path to true success and happiness in both this life and beyond.
+  </text>
+  
+  <!-- Navigation Info -->
+  <text x="160" y="770" fill="rgba(255,255,255,0.7)" font-size="14" font-family="Arial, sans-serif">Use ‹ › buttons to navigate between Kurals | Toggle language with the Language button</text>
+</svg>
