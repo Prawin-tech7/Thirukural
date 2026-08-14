@@ -16,7 +16,7 @@ This project helps users quickly look up and read Thirukkural verses in Tamil, t
 - Tamil/English interface language switch
 - Search history stored in the browser
 - Clear history button
-- Eight glass-style color themes with selected theme tick
+- Multiple glass-style color themes with selected theme tick
 
 ## Good starting Kurals
 
@@ -35,20 +35,18 @@ These are a few of the more memorable Kurals and make a nice starting point for 
 
 ```text
 Thirukural/
-├── app.py                      # Flask app entry point
-├── build_thirukural_dataset.py # dataset generation script
+├── main.py                     # Flask app entry point
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # project documentation
-├── run_app.bat                 # run app on Windows
-├── thirukural_tamil.csv        # Kural dataset in CSV format
-├── thirukural_tamil.json       # Kural dataset in JSON format
+├── .gitignore                  # ignores cache and editor files
+├── thirukural_tamil.csv        # main Kural dataset used by the app
 ├── static/
 │   ├── script.js               # theme, UI, and interaction logic
 │   └── style.css               # layout and styling
 ├── templates/
 │   ├── index.html              # home page for Kural lookup
 │   └── kural.html              # Kural detail view
-└── .gitignore                  # ignores cache and editor files
+└── README-assets/              # optional local screenshots if added later
 ```
 
 ## UI Screenshots
@@ -69,7 +67,7 @@ This screen shows the selected Kural in Tamil, with an option to toggle English 
 
 ```bash
 pip install -r requirements.txt
-python app.py
+python main.py
 ```
 
 Open:
@@ -78,17 +76,4 @@ Open:
 http://127.0.0.1:5000
 ```
 
-## Rebuild Dataset
-
-The CSV is already built, but you can regenerate it from the public source:
-
-```bash
-python build_thirukural_dataset.py
-```
-
-This creates:
-
-- `thirukural_tamil.csv`
-- `thirukural_tamil.json`
-
-The app loads the CSV once when Flask starts, so searches are fast and do not need internet access.
+The app reads the local `thirukural_tamil.csv` file directly, so no extra dataset build step is required.
