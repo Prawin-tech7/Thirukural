@@ -76,10 +76,9 @@ Thirukural/
 ├── static/
 │   ├── script.js               # theme, UI, and interaction logic
 │   └── style.css               # layout and styling
-├── templates/
-│   ├── index.html              # home page for Kural lookup
-│   └── kural.html              # Kural detail view
-└── README-assets/              # optional local screenshots if added later
+└── templates/
+    ├── index.html              # home page for Kural lookup
+    └── kural.html              # Kural detail view
 ```
 
 ## User Interface
