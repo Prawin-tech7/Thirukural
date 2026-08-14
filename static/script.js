@@ -13,6 +13,12 @@ const THEMES = [
 
   ["lavender", "Lavender", ["#f5f3ff", "#ddd6fe", "#a78bfa", "#5b21b6"], "#7c3aed", "#211333"],
 
+  ["sunset-garden", "Sunset Garden", ["#fff7ed", "#f9a8d4", "#fb923c", "#6b21a8"], "#f97316", "#2a102d"],
+
+  ["forest-glow", "Forest Glow", ["#ecfdf5", "#86efac", "#22c55e", "#14532d"], "#16a34a", "#041f12"],
+
+  ["aurora-rose", "Aurora Rose", ["#fdf2f8", "#f9a8d4", "#a78bfa", "#312e81"], "#8b5cf6", "#1f1633"],
+
   ["dark-violet", "Dark Violet", ["#2e1065", "#581c87", "#c084fc", "#0f0718"], "#a855f7", "#faf5ff"],
 
   ["dark-blue", "Dark Blue", ["#0f172a", "#1e3a8a", "#60a5fa", "#020617"], "#60a5fa", "#eff6ff"],
@@ -74,7 +80,7 @@ const COPY = {
     invalidNumber: "1 முதல் 1330 வரை ஒரு எண்ணை உள்ளிடுங்கள்.",
     exitQuestion: "இந்த பக்கத்திலிருந்து வெளியேற வேண்டுமா?"
   },
-  
+
   en: {
     eyebrow: "Thirukural Finder",
     homeTitle: "Enter a Kural number",
@@ -179,7 +185,7 @@ function renderThemes() {
     list.appendChild(button);
   });
 
-  applyTheme(localStorage.getItem(storage.theme) || "peacock");
+  applyTheme(localStorage.getItem(storage.theme) || "sunset-garden");
 }
 
 function applyLanguage(nextLang) {

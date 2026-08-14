@@ -18,6 +18,19 @@ This project helps users quickly look up and read Thirukkural verses in Tamil, t
 - Clear history button
 - Eight glass-style color themes with selected theme tick
 
+## Good starting Kurals
+
+If you want a few well-known and meaningful choices to try first, the app works great with numbers like:
+
+- 1
+- 25
+- 38
+- 71
+- 100
+- 127
+
+These are a few of the more memorable Kurals and make a nice starting point for exploring the collection.
+
 ## UI Screenshots
 
 ### Home screen
