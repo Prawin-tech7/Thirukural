@@ -31,6 +31,29 @@ If you want a few well-known and meaningful choices to try first, the app works 
 
 These are a few of the more memorable Kurals and make a nice starting point for exploring the collection.
 
+## Project Structure
+
+```text
+Thirukural/
+├── app.py                      # Flask app entry point
+├── build_thirukural_dataset.py # dataset generation script
+├── requirements.txt            # Python dependencies
+├── README.md                   # project documentation
+├── run_app.bat                 # run app on Windows
+├── thirukural_tamil.csv        # Kural dataset in CSV format
+├── thirukural_tamil.json       # Kural dataset in JSON format
+├── static/
+│   ├── script.js               # theme, UI, and interaction logic
+│   └── style.css               # layout and styling
+├── templates/
+│   ├── index.html              # home page for Kural lookup
+│   └── kural.html              # Kural detail view
+└── docs/
+    └── screenshots/
+        ├── home-screen.svg     # home page UI mockup
+        └── kural-detail.svg    # detail page UI mockup
+```
+
 ## UI Screenshots
 
 ### Home screen
