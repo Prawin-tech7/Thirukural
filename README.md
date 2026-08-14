@@ -48,25 +48,22 @@ Thirukural/
 ├── templates/
 │   ├── index.html              # home page for Kural lookup
 │   └── kural.html              # Kural detail view
-└── docs/
-    └── screenshots/
-        ├── home-screen.svg     # home page UI mockup
-        └── kural-detail.svg    # detail page UI mockup
+└── .gitignore                  # ignores cache and editor files
 ```
 
 ## UI Screenshots
 
 ### Home screen
 
-![Home screen](docs/screenshots/home-screen.svg)
+![Home screen](https://raw.githubusercontent.com/Prawin-tech7/Thirukural/master/README-assets/home-screen-fire-ice.svg)
 
-This screen allows the user to enter a Kural number and instantly search for the matching verse. The layout is simple, mobile-friendly, and includes search history for quick revisits.
+This screen allows the user to enter a Kural number and instantly search for the matching verse. The Fire & Ice theme gives the app a vibrant, modern look while keeping the interface clean and readable.
 
 ### Kural detail page
 
-![Kural detail page](docs/screenshots/kural-detail.svg)
+![Kural detail page](https://raw.githubusercontent.com/Prawin-tech7/Thirukural/master/README-assets/kural-detail-fire-ice.svg)
 
-This screen shows the selected Kural in Tamil, with an option to toggle English translation and view the meaning. It gives a focused reading experience for one verse at a time.
+This screen shows the selected Kural in Tamil, with an option to toggle English translation and view the meaning. The Fire & Ice palette keeps the reading area visually rich without reducing clarity.
 
 ## Run
 
