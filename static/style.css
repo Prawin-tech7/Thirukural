@@ -1274,8 +1274,18 @@ input[type="number"]:focus {
 input[type="range"] {
   width: 100%;
 
+  -webkit-appearance: none;
+
+  appearance: none;
+
+  background: transparent;
+
   accent-color:
     var(--accent);
+
+  cursor: ew-resize;
+
+  pointer-events: auto;
 }
 
 
@@ -1286,6 +1296,8 @@ input[type="range"]::-webkit-slider-runnable-track {
     rgba(255, 255, 255, 0.18);
 
   border-radius: 8px;
+
+  cursor: pointer;
 }
 
 
@@ -1317,8 +1329,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 
-input[type="range"]:active
-::-webkit-slider-thumb {
+input[type="range"]:active::-webkit-slider-thumb {
   cursor: grabbing;
 }
 
